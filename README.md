@@ -9,4 +9,4 @@ Flutter Mobile Application for:
 * [Provider Package](https://pub.dev/packages/provider), for state management
 * [Google Fonts Arabic](https://pub.dev/packages/google_fonts_arabic), for arabic font styles
 * Flutter localization, for right-to-left layout (Arabic Text)
-* [Muslim Kit](https://ahegazy.github.io/muslimKit/json/), for json files that contains the azkar
+* [Muslim Kit](https://ahegazy.github.io/muslimKit/json/), for json files that contain the azkar
