@@ -1,6 +1,8 @@
 import 'package:azkar_app_flutter/constants.dart';
 import 'package:azkar_app_flutter/viewModels/azkar_view_model.dart';
+import 'package:azkar_app_flutter/viewModels/prayer_times_view_model.dart';
 import 'package:azkar_app_flutter/views/azkar_view.dart';
+import 'package:azkar_app_flutter/views/prayer_times_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -15,6 +17,12 @@ class HomeView extends StatelessWidget {
       appBar: AppBar(
         title: Center(
           child: Text('أذكار المسلم'),
+        ),
+      ),
+      body: ChangeNotifierProvider(
+        create: (_) => PrayerTimesViewModel(),
+        child: SafeArea(
+          child: PrayerTimesView(),
         ),
       ),
       drawer: SafeArea(

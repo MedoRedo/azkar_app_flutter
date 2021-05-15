@@ -46,7 +46,7 @@ class AzkarView extends StatelessWidget {
             index,
             (context, animation) => slideIt(animation, index, zekr, context),
             duration: Duration(
-              milliseconds: 300,
+              milliseconds: 500,
             ),
           );
         }
@@ -76,6 +76,9 @@ class ZekrCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.symmetric(vertical: 8.0),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20.0),
+      ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
