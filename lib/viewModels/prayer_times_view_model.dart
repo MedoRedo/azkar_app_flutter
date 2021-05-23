@@ -1,4 +1,4 @@
-import 'package:azkar_app_flutter/models/prayer_time.dart';
+import 'package:azkar_app_flutter/models/prayer_time_model.dart';
 import 'package:azkar_app_flutter/services/prayer_times_service.dart';
 import 'package:flutter/material.dart';
 
@@ -18,8 +18,6 @@ class PrayerTimesViewModel with ChangeNotifier {
     }
   }
 
-  Future<List<PrayerTime>> get times async {
-    await fetchTimingsOfToday();
-    return _times;
-  }
+  List<PrayerTime> get times => _times;
+
 }

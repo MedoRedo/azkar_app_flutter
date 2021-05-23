@@ -1,15 +1,19 @@
-import 'package:azkar_app_flutter/models/prayer_time.dart';
+import 'package:azkar_app_flutter/models/prayer_time_model.dart';
 import 'package:azkar_app_flutter/viewModels/prayer_times_view_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class PrayerTimesView extends StatelessWidget {
+  Future<List<PrayerTime>> getData(BuildContext context) async{
+    await context.read<PrayerTimesViewModel>().fetchTimingsOfToday();
+    return context.read<PrayerTimesViewModel>().times;
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
       child: FutureBuilder(
-        future: context.read<PrayerTimesViewModel>().times,
+        future: getData(context),
         builder: (context, snapshot) {
           switch (snapshot.connectionState) {
             case ConnectionState.none:
